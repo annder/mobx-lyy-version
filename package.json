@@ -1,0 +1,29 @@
+{
+  "name": "mobx-lyy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.8.1",
+    "webpack": "^4.5.0",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "mocha": "^5.1.0",
+    "chai": "^4.1.2",
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^5.0.0"
+  },
+  "scripts": {
+    "test": "mocha --require ts-node/register \"./test/*.ts\"",
+    "build": "webpack --mode development",
+    "watch-build": "webpack --mode development --watch",
+    "server": "webpack-dev --watch --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^5.0.1",
+    "webpack-cli": "^2.0.14"
+  }
+}
