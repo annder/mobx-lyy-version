@@ -1,13 +1,8 @@
-export function observer(
-    target: Object,
-    properKey: string | symbol): void {
-    let currentTarget: any = target;
-    let storeDescriptor: Array<any> = [];
-    try {
-        storeDescriptor.push(target);
+export function observer<T extends
+    { new(...arg: any[]): any }>
+    (constructor: T):
+    T | void {
+    return class extends constructor {
+        
     }
-    finally {
-        currentTarget = target;
-    }
-    console.log(currentTarget);
 }
